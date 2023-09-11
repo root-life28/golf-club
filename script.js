@@ -1,3 +1,13 @@
+var cr=document.querySelector("#cursor");
+var cr_blur=document.querySelector("#cursor-blur");
+document.addEventListener("mousemove",(dest)=>{
+    cr.style.left=dest.x+"px";
+    cr.style.top=dest.y+"px";
+    cr_blur.style.left=dest.x-250+"px";
+    cr_blur.style.top=dest.y-250+"px";
+})
+
+
 gsap.to("#nav",{
     backgroundColor:"#000",
     height:"110px",
